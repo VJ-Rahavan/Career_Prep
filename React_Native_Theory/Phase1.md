@@ -1,5 +1,6 @@
 1. What is React Native?
-   React Native is a JavaScript framework used for building cross-platform mobile applications. It allows you to use React (a JavaScript library for building user interfaces) to develop applications for iOS and Android devices using a single codebase. React Native components are backed by native components, which means they offer a close-to-native experience in terms of performance and user interface.
+
+React Native is a JavaScript framework used for building cross-platform mobile applications. It allows you to use React (a JavaScript library for building user interfaces) to develop applications for iOS and Android devices using a single codebase. React Native components are backed by native components, which means they offer a close-to-native experience in terms of performance and user interface.
 
 2. What are the differences between React and React Native?
 
@@ -7,13 +8,16 @@
 - React Native allows you to build mobile applications for iOS and Android. While React is focused on the web, React Native focuses on mobile devices using native components like View, Text, and Image, rather than the traditional HTML tags like div, span, and img.
 
 3. What is JSX in React Native?
-   JSX (JavaScript XML) is a syntax extension for JavaScript used in React to write UI components. It looks like HTML inside JavaScript but is compiled into JavaScript function calls.
+
+JSX (JavaScript XML) is a syntax extension for JavaScript used in React to write UI components. It looks like HTML inside JavaScript but is compiled into JavaScript function calls.
 
 4. What is a component in React Native?
-   A component is a building block of a React Native application. It is a reusable, self-contained piece of the user interface (UI) that can be rendered independently. Components in React Native can either be functional or class-based. For example, a button or a text field is a component.
+
+A component is a building block of a React Native application. It is a reusable, self-contained piece of the user interface (UI) that can be rendered independently. Components in React Native can either be functional or class-based. For example, a button or a text field is a component.
 
 5. What are props in React Native?
-   Props (short for properties) are used to pass data from a parent component to a child component in React Native. They are immutable, meaning once a prop is set, it cannot be changed within the child component. Props are used to customize components with different values, making them reusable and dynamic.
+
+Props (short for properties) are used to pass data from a parent component to a child component in React Native. They are immutable, meaning once a prop is set, it cannot be changed within the child component. Props are used to customize components with different values, making them reusable and dynamic.
 
 6. What are state and setState in React Native?
 
@@ -26,21 +30,24 @@
 - useEffect is a hook used for performing side effects in functional components, such as fetching data, subscribing to events, or manipulating the DOM. It runs after the component renders, and you can specify when it should run based on dependencies.
 
 8. How does React Native handle navigation?
-   React Native uses libraries like React Navigation or React Native Navigation for managing screen transitions and navigation flow within the app. React Navigation provides a declarative API to handle stack, tab, and drawer navigation in a simple way. It also supports deep linking, nested navigators, and custom navigation bar configurations.
+
+React Native uses libraries like React Navigation or React Native Navigation for managing screen transitions and navigation flow within the app. React Navigation provides a declarative API to handle stack, tab, and drawer navigation in a simple way. It also supports deep linking, nested navigators, and custom navigation bar configurations.
 
 9. What is Flexbox in React Native?
-   Flexbox is a layout system that allows you to create complex layouts with ease. It works by distributing space along a container’s axis, either vertically or horizontally. React Native uses Flexbox to layout its components. Flexbox properties include flexDirection, justifyContent, alignItems, and alignSelf.
+
+Flexbox is a layout system that allows you to create complex layouts with ease. It works by distributing space along a container’s axis, either vertically or horizontally. React Native uses Flexbox to layout its components. Flexbox properties include flexDirection, justifyContent, alignItems, and alignSelf.
 
 10. How do you handle styles in React Native?
-    In React Native, styles are handled using a JavaScript object passed into components. The StyleSheet API is often used to create styles, which then get applied to the component’s style property. You can also use libraries like styled-components to apply styles in a more declarative manner.
-    Example:
-    const styles = StyleSheet.create({
-    container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    },
-    });
+
+In React Native, styles are handled using a JavaScript object passed into components. The StyleSheet API is often used to create styles, which then get applied to the component’s style property. You can also use libraries like styled-components to apply styles in a more declarative manner.
+Example:
+const styles = StyleSheet.create({
+container: {
+flex: 1,
+justifyContent: 'center',
+alignItems: 'center',
+},
+});
 
 11. What is the difference between View and Text in React Native?
 
@@ -48,18 +55,21 @@
 - Text: Text is used for displaying text content. It can only hold text and text-based components.
 
 12. What are Native Modules in React Native?
-    Native Modules in React Native allow you to write code that interacts with the platform’s native code (Java, Swift, Objective-C) to access APIs that are not available in React Native. These modules are written in the platform’s native language and then bridged to JavaScript to use in your app.
+
+Native Modules in React Native allow you to write code that interacts with the platform’s native code (Java, Swift, Objective-C) to access APIs that are not available in React Native. These modules are written in the platform’s native language and then bridged to JavaScript to use in your app.
 
 13. How do you handle network requests in React Native?
-    Network requests in React Native are typically handled using the built-in fetch API, or third-party libraries like Axios. The fetch API is used to make HTTP requests to RESTful APIs and receive data in response.
-    Example:
-    fetch('https://api.example.com/data')
-    .then(response => response.json())
-    .then(data => console.log(data))
-    .catch(error => console.log('Error:', error));
+
+Network requests in React Native are typically handled using the built-in fetch API, or third-party libraries like Axios. The fetch API is used to make HTTP requests to RESTful APIs and receive data in response.
+Example:
+fetch('https://api.example.com/data')
+.then(response => response.json())
+.then(data => console.log(data))
+.catch(error => console.log('Error:', error));
 
 14. How can you debug a React Native application?
-    You can debug a React Native app using various methods:
+
+You can debug a React Native app using various methods:
 
 - Remote Debugging: Use the browser’s developer tools to inspect and debug JavaScript code.
 - Console.log(): Use console.log() statements to inspect values in the console.
@@ -72,18 +82,20 @@
 - FlatList: FlatList is a more efficient component for rendering large lists of data. It only renders the items that are visible on the screen (virtualization), improving performance by not rendering off-screen items. It also offers features like item separators, pull-to-refresh, and pagination.
 
 16. What is the purpose of the keyExtractor in FlatList?
-    The keyExtractor is a function used in FlatList to uniquely identify each item in the list by providing a unique key for each element. This helps React Native optimize the rendering of list items and maintain their state during updates.
-    Example:
-    <FlatList
-    data={data}
-    keyExtractor={(item) => item.id.toString()} // Each item must have a unique key
-    renderItem={({ item }) => <Text>{item.name}</Text>}
-    />
+
+The keyExtractor is a function used in FlatList to uniquely identify each item in the list by providing a unique key for each element. This helps React Native optimize the rendering of list items and maintain their state during updates.
+Example:
+<FlatList
+data={data}
+keyExtractor={(item) => item.id.toString()} // Each item must have a unique key
+renderItem={({ item }) => <Text>{item.name}</Text>}
+/>
 
 17. How do you handle forms in React Native?
-    Forms in React Native can be handled using controlled components, where the form data is managed by React state. You can use the TextInput component for user inputs and update the state accordingly. To handle form submission, you typically use a button component and call a handler function.
-    Example:
-    const [name, setName] = useState('');
+
+Forms in React Native can be handled using controlled components, where the form data is managed by React state. You can use the TextInput component for user inputs and update the state accordingly. To handle form submission, you typically use a button component and call a handler function.
+Example:
+const [name, setName] = useState('');
 
 const handleSubmit = () => {
 console.log(name);
@@ -101,9 +113,10 @@ return (
 );
 
 18. What is useRef in React Native?
-    useRef is a hook that provides a way to access and persist values across renders without causing re-renders. It is often used for accessing DOM elements or React Native components directly (like focus on a TextInput) or storing mutable values.
-    Example:
-    const inputRef = useRef(null);
+
+useRef is a hook that provides a way to access and persist values across renders without causing re-renders. It is often used for accessing DOM elements or React Native components directly (like focus on a TextInput) or storing mutable values.
+Example:
+const inputRef = useRef(null);
 
 const focusInput = () => {
 inputRef.current.focus();
@@ -117,9 +130,10 @@ return (
 );
 
 19. How do you handle animations in React Native?
-    Animations in React Native can be created using the Animated API. You can animate properties like opacity, transform, and scale to create smooth UI transitions and interactions. The useNativeDriver option is used to improve performance by offloading the animation work to the native thread.
-    Example:
-    const fadeAnim = useRef(new Animated.Value(0)).current;
+
+Animations in React Native can be created using the Animated API. You can animate properties like opacity, transform, and scale to create smooth UI transitions and interactions. The useNativeDriver option is used to improve performance by offloading the animation work to the native thread.
+Example:
+const fadeAnim = useRef(new Animated.Value(0)).current;
 
 const fadeIn = () => {
 Animated.timing(fadeAnim, {
@@ -136,9 +150,10 @@ return (
 );
 
 20. How do you handle permissions in React Native?
-    Permissions in React Native can be managed using libraries like react-native-permissions or platform-specific APIs like PermissionsAndroid for Android and Permissions for iOS. These libraries provide a way to request and check for permissions required by the app, such as camera or location access.
-    Example using react-native-permissions:
-    import { check, request, PERMISSIONS, RESULTS } from 'react-native-permissions';
+
+Permissions in React Native can be managed using libraries like react-native-permissions or platform-specific APIs like PermissionsAndroid for Android and Permissions for iOS. These libraries provide a way to request and check for permissions required by the app, such as camera or location access.
+Example using react-native-permissions:
+import { check, request, PERMISSIONS, RESULTS } from 'react-native-permissions';
 
 const checkPermission = async () => {
 const result = await check(PERMISSIONS.ANDROID.CAMERA);
@@ -153,7 +168,8 @@ console.log('Permission granted');
 };
 
 21. What are the lifecycle methods in React Native?
-    React Native components have lifecycle methods that determine when a component should be created, updated, and destroyed. These methods are similar to React’s lifecycle methods:
+
+React Native components have lifecycle methods that determine when a component should be created, updated, and destroyed. These methods are similar to React’s lifecycle methods:
 
 - componentDidMount(): Called when the component is mounted for the first time.
 - componentDidUpdate(): Called after the component updates due to changes in state or props.
@@ -161,9 +177,10 @@ console.log('Permission granted');
   For functional components, the equivalent behavior can be achieved using the useEffect hook.
 
 22. How do you implement deep linking in React Native?
-    Deep linking in React Native allows your app to respond to URLs and navigate to specific screens based on the URL scheme. React Navigation provides built-in support for deep linking.
-    Example:
-    import { Linking } from 'react-native';
+
+Deep linking in React Native allows your app to respond to URLs and navigate to specific screens based on the URL scheme. React Navigation provides built-in support for deep linking.
+Example:
+import { Linking } from 'react-native';
 
 const handleDeepLink = (event) => {
 const { url } = event;
@@ -192,14 +209,16 @@ const inputRef = useRef(null);
 return <TextInput ref={inputRef} />;
 
 24. What is the useEffect hook and how does it work?
-    useEffect is a hook used in functional components to perform side effects, such as data fetching, setting up subscriptions, or manually modifying the DOM. It runs after the component has rendered and can be configured to run on specific dependencies (e.g., when certain state values change).
-    Example:
-    useEffect(() => {
-    console.log('Component mounted or updated!');
-    }, [dependency]); // Runs when the dependency changes
+
+useEffect is a hook used in functional components to perform side effects, such as data fetching, setting up subscriptions, or manually modifying the DOM. It runs after the component has rendered and can be configured to run on specific dependencies (e.g., when certain state values change).
+Example:
+useEffect(() => {
+console.log('Component mounted or updated!');
+}, [dependency]); // Runs when the dependency changes
 
 25. How do you optimize the performance of a React Native app?
-    There are several strategies to optimize performance in React Native:
+
+There are several strategies to optimize performance in React Native:
 
 - Use FlatList for large lists: It renders only the visible items, improving the app’s memory usage.
 - Memoization with React.memo: Prevent unnecessary re-renders of components.
@@ -218,24 +237,28 @@ Here are some more theory-based questions related to React Native:
 - JavaScript knowledge: If you already know JavaScript, you can quickly transition to React Native without needing to learn platform-specific languages like Swift (iOS) or Java (Android).
 
 27. Explain the concept of "bridging" in React Native.
-    Bridging in React Native refers to the communication layer between the JavaScript thread and the native thread (iOS or Android). React Native provides a bridge to allow JavaScript code to interact with native code. This is particularly useful when native code is needed for tasks that cannot be handled with JavaScript alone, such as using platform-specific APIs or optimizing performance for certain operations.
-    When an interaction happens, JavaScript sends a message through the bridge to native code, and the native module processes the request and sends back the results. This allows React Native to maintain its cross-platform nature while leveraging platform-specific features.
+
+Bridging in React Native refers to the communication layer between the JavaScript thread and the native thread (iOS or Android). React Native provides a bridge to allow JavaScript code to interact with native code. This is particularly useful when native code is needed for tasks that cannot be handled with JavaScript alone, such as using platform-specific APIs or optimizing performance for certain operations.
+When an interaction happens, JavaScript sends a message through the bridge to native code, and the native module processes the request and sends back the results. This allows React Native to maintain its cross-platform nature while leveraging platform-specific features.
 
 28. What is the purpose of the "Virtual DOM" in React Native?
-    The Virtual DOM is an abstraction of the actual DOM (or native view hierarchy in React Native). It allows React to optimize rendering by maintaining a lightweight in-memory representation of the UI. When a component’s state or props change, React updates the Virtual DOM first. Then, it compares the new Virtual DOM with the previous one (using a process called “reconciliation”) to calculate the minimal set of changes needed to update the actual UI.
-    This improves performance by reducing direct manipulation of the actual DOM and avoiding unnecessary re-rendering of the entire UI.
+
+The Virtual DOM is an abstraction of the actual DOM (or native view hierarchy in React Native). It allows React to optimize rendering by maintaining a lightweight in-memory representation of the UI. When a component’s state or props change, React updates the Virtual DOM first. Then, it compares the new Virtual DOM with the previous one (using a process called “reconciliation”) to calculate the minimal set of changes needed to update the actual UI.
+This improves performance by reducing direct manipulation of the actual DOM and avoiding unnecessary re-rendering of the entire UI.
 
 29. How does React Native handle navigation differently from React?
-    In React, navigation is typically handled using routing libraries like React Router, which allows for navigation between different pages or views within a web app. React’s routing relies on the browser's history API to manage the navigation stack.
+
+In React, navigation is typically handled using routing libraries like React Router, which allows for navigation between different pages or views within a web app. React’s routing relies on the browser's history API to manage the navigation stack.
 
 React Native uses libraries like React Navigation or React Native Navigation, which are specifically designed for mobile navigation patterns. These libraries provide stack-based, tab-based, and drawer navigation tailored for mobile devices, and they also include features like deep linking, modal navigation, and gesture-based navigation.
 
 30. What is "state lifting" in React Native?
-    State lifting refers to the process of moving state from a child component to a common parent component so that it can be shared between multiple child components. This is typically done when different components need to access or modify the same piece of state.
-    In React Native, lifting state up allows the parent component to manage the shared state, and it can pass it down as props to its children. This improves the modularity and reusability of components while ensuring state is kept in sync.
-    Example:
-    function Parent() {
-    const [count, setCount] = useState(0);
+
+State lifting refers to the process of moving state from a child component to a common parent component so that it can be shared between multiple child components. This is typically done when different components need to access or modify the same piece of state.
+In React Native, lifting state up allows the parent component to manage the shared state, and it can pass it down as props to its children. This improves the modularity and reusability of components while ensuring state is kept in sync.
+Example:
+function Parent() {
+const [count, setCount] = useState(0);
 
 return (
 <Child count={count} onCountChange={setCount} />
@@ -257,11 +280,13 @@ return (
 - Stateful Components: These components manage their internal state using React’s state API (useState or class component state). They can update their state and cause the component to re-render based on that state change.
 
 32. What is the importance of key prop in lists in React Native?
-    The key prop is important in lists because it helps React Native identify which items in the list have changed, been added, or been removed. Without the key prop, React Native would have to re-render all items in the list every time there is a change, leading to performance issues. The key prop ensures that each list item is uniquely identified and can be efficiently updated when the list changes.
-    Keys should be unique and stable, ideally coming from a unique identifier in the data (like an ID).
+
+The key prop is important in lists because it helps React Native identify which items in the list have changed, been added, or been removed. Without the key prop, React Native would have to re-render all items in the list every time there is a change, leading to performance issues. The key prop ensures that each list item is uniquely identified and can be efficiently updated when the list changes.
+Keys should be unique and stable, ideally coming from a unique identifier in the data (like an ID).
 
 33. What is the "reconciliation" process in React Native?
-    Reconciliation is the process by which React compares the current UI (Virtual DOM) with a new version after a component’s state or props change. It then updates only the parts of the UI that have changed, avoiding unnecessary re-renders and improving performance.
+
+Reconciliation is the process by which React compares the current UI (Virtual DOM) with a new version after a component’s state or props change. It then updates only the parts of the UI that have changed, avoiding unnecessary re-renders and improving performance.
 
 34. What is the difference between componentDidMount and componentWillUnmount in React Native?
 
@@ -269,8 +294,9 @@ return (
 - componentWillUnmount(): This lifecycle method is called right before the component is removed from the view hierarchy (unmounted). It is commonly used for cleaning up resources such as timers, subscriptions, or network requests to avoid memory leaks.
 
 35. What is "context" in React Native, and when should it be used?
-    Context in React Native is a way to pass data through the component tree without having to manually pass props down at every level. It is typically used when some data needs to be accessible by many components at different nesting levels, such as user authentication status or theming.
-    Context is useful when:
+
+Context in React Native is a way to pass data through the component tree without having to manually pass props down at every level. It is typically used when some data needs to be accessible by many components at different nesting levels, such as user authentication status or theming.
+Context is useful when:
 
 - You need to pass data through many layers of components.
 - Prop-drilling becomes cumbersome.
@@ -293,7 +319,8 @@ return <Text>{user.name}</Text>;
 }
 
 36. What is the purpose of async and await in React Native?
-    async and await are used to work with asynchronous operations more effectively in JavaScript (and React Native). They allow you to write asynchronous code in a more synchronous and readable manner, avoiding callback hell and improving error handling.
+
+async and await are used to work with asynchronous operations more effectively in JavaScript (and React Native). They allow you to write asynchronous code in a more synchronous and readable manner, avoiding callback hell and improving error handling.
 
 - async: Makes a function return a promise.
 - await: Pauses the execution of the async function until the promise resolves or rejects, simplifying code that works with asynchronous operations like fetching data.
@@ -311,10 +338,11 @@ return <Text>{user.name}</Text>;
 Here are more theory-based questions related to React Native:
 
 37. What is JSX in React Native, and why is it used?
-    JSX (JavaScript XML) is a syntax extension for JavaScript that allows you to write HTML-like code within JavaScript. React Native uses JSX to describe what the UI should look like. It is not a string but gets compiled into JavaScript code. JSX makes it easier to visualize and define the component structure, as it closely resembles the HTML code used in web development.
-    Example:
-    const element = <Text>Hello, World!</Text>;
-    JSX is used because it improves readability and makes React components more intuitive to write. It allows you to express component structure and logic in a familiar, declarative way.
+
+JSX (JavaScript XML) is a syntax extension for JavaScript that allows you to write HTML-like code within JavaScript. React Native uses JSX to describe what the UI should look like. It is not a string but gets compiled into JavaScript code. JSX makes it easier to visualize and define the component structure, as it closely resembles the HTML code used in web development.
+Example:
+const element = <Text>Hello, World!</Text>;
+JSX is used because it improves readability and makes React components more intuitive to write. It allows you to express component structure and logic in a familiar, declarative way.
 
 38. What is the difference between props and state in React Native?
 
@@ -339,8 +367,9 @@ return (
 }
 
 39. What are Hooks in React Native, and how do they differ from class components?
-    Hooks are functions that let you "hook into" React features such as state, lifecycle methods, and context, without needing to write a class. Hooks were introduced in React 16.8, and they allow functional components to manage state, side effects, and more.
-    Some commonly used hooks in React Native:
+
+Hooks are functions that let you "hook into" React features such as state, lifecycle methods, and context, without needing to write a class. Hooks were introduced in React 16.8, and they allow functional components to manage state, side effects, and more.
+Some commonly used hooks in React Native:
 
 - useState: Adds state to functional components.
 - useEffect: Performs side effects such as data fetching, subscriptions, and DOM manipulations.
@@ -363,19 +392,20 @@ console.log('Component layout updated!');
 }, []);
 
 41. How does React Native handle styling?
-    In React Native, styling is handled through a JavaScript object that mirrors CSS properties but with some differences. Instead of using CSS stylesheets, you define styles directly in your components using the StyleSheet API or inline styles.
-    Example:
-    const styles = StyleSheet.create({
-    container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    },
-    text: {
-    fontSize: 20,
-    color: 'blue',
-    },
-    });
+
+In React Native, styling is handled through a JavaScript object that mirrors CSS properties but with some differences. Instead of using CSS stylesheets, you define styles directly in your components using the StyleSheet API or inline styles.
+Example:
+const styles = StyleSheet.create({
+container: {
+flex: 1,
+justifyContent: 'center',
+alignItems: 'center',
+},
+text: {
+fontSize: 20,
+color: 'blue',
+},
+});
 
 return (
 <View style={styles.container}>
@@ -385,22 +415,21 @@ return (
 React Native also supports flexbox, which is commonly used for layout, and many CSS properties like padding, margin, and font styles are supported, but there are some differences like shadow and overflow that may need platform-specific adjustments.
 
 42. What is the purpose of the TouchableOpacity component in React Native?
-    TouchableOpacity is a wrapper component in React Native used to create a touchable area for interactive UI elements such as buttons or images. It provides a visual feedback (opacity change) when the user taps on it, making the app feel more responsive.
-    It is often used for buttons, as it can make an element appear pressed when touched, improving user experience.
-    Example:
-    <TouchableOpacity onPress={handlePress}>
-    <Text>Click Me</Text>
-    </TouchableOpacity>
+
+TouchableOpacity is a wrapper component in React Native used to create a touchable area for interactive UI elements such as buttons or images. It provides a visual feedback (opacity change) when the user taps on it, making the app feel more responsive.
+It is often used for buttons, as it can make an element appear pressed when touched, improving user experience.
+Example:
+<TouchableOpacity onPress={handlePress}>
+<Text>Click Me</Text>
+</TouchableOpacity>
 
 43. What is the purpose of redux in React Native?
-    Redux is a state management library used to manage the state of an application in a predictable manner. It is especially useful for managing complex states or when different parts of the application need to share state or data. Redux follows a unidirectional data flow model where:
-44. Actions describe "what happened."
-45. Reducers describe how the state changes in response to an action.
-46. Store holds the application state.
-    Redux allows for centralizing the application's state in one store, which simplifies debugging and testing, and it also enables features like undo/redo or time travel debugging.
-    Example:
-    // Action
-    const increment = () => ({ type: 'INCREMENT' });
+
+Redux is a state management library used to manage the state of an application in a predictable manner. It is especially useful for managing complex states or when different parts of the application need to share state or data. Redux follows a unidirectional data flow model where: 44. Actions describe "what happened." 45. Reducers describe how the state changes in response to an action. 46. Store holds the application state.
+Redux allows for centralizing the application's state in one store, which simplifies debugging and testing, and it also enables features like undo/redo or time travel debugging.
+Example:
+// Action
+const increment = () => ({ type: 'INCREMENT' });
 
 // Reducer
 const counterReducer = (state = { count: 0 }, action) => {
@@ -413,7 +442,8 @@ return state;
 };
 
 44. How do you manage navigation in React Native?
-    React Native uses navigation libraries such as React Navigation and React Native Navigation to manage app navigation. These libraries provide different types of navigation patterns like stack, tab, and drawer navigation.
+
+React Native uses navigation libraries such as React Navigation and React Native Navigation to manage app navigation. These libraries provide different types of navigation patterns like stack, tab, and drawer navigation.
 
 - React Navigation is a JavaScript-based solution that is easy to use and integrates well with React Native. It provides an easy-to-implement stack navigator, tab navigator, and drawer navigator.
 - React Native Navigation is a more complex, native navigation library that offers performance benefits due to its reliance on native navigation components.
@@ -435,15 +465,17 @@ return (
 }
 
 45. How does React Native handle background tasks?
-    React Native provides a few methods and libraries to handle background tasks such as fetching data, notifications, or running long-running tasks. Some common libraries include:
+
+React Native provides a few methods and libraries to handle background tasks such as fetching data, notifications, or running long-running tasks. Some common libraries include:
 
 - React Native Background Fetch: Allows running background tasks periodically, even when the app is not in the foreground.
 - React Native Push Notification: Provides background task handling for delivering push notifications while the app is in the background or terminated.
   These background processes can be managed through native code or using JavaScript with the help of third-party libraries. Background tasks are essential for apps that require real-time updates or periodic sync operations.
 
 46. What is "prop drilling" and how can you avoid it in React Native?
-    Prop drilling refers to the process of passing data from parent components down to child components through multiple layers of the component tree. This can lead to cluttered and hard-to-maintain code, especially in large applications.
-    You can avoid prop drilling by using:
+
+Prop drilling refers to the process of passing data from parent components down to child components through multiple layers of the component tree. This can lead to cluttered and hard-to-maintain code, especially in large applications.
+You can avoid prop drilling by using:
 
 - Context API: This allows passing data directly to components that need it, without the need to pass props through each intermediate component.
 - State management libraries: Such as Redux or Zustand, which allow global state management that components can access without prop drilling.
@@ -460,10 +492,11 @@ return (
   In this case, the red View will take up all available space, while the blue View will grow to take any extra space after the red one.
 
 48. What is "debouncing" and when would you use it in React Native?
-    Debouncing is a technique used to limit the number of times a function is executed. It is commonly used when dealing with user input events, such as typing in a search bar, where you don't want the function (e.g., API calls) to run after every keystroke but rather after the user has stopped typing for a certain amount of time.
-    Debouncing ensures that the function only executes once after a specified delay, improving performance and reducing unnecessary calls.
-    Example with useEffect and debounce:
-    import { useState, useEffect } from 'react';
+
+Debouncing is a technique used to limit the number of times a function is executed. It is commonly used when dealing with user input events, such as typing in a search bar, where you don't want the function (e.g., API calls) to run after every keystroke but rather after the user has stopped typing for a certain amount of time.
+Debouncing ensures that the function only executes once after a specified delay, improving performance and reducing unnecessary calls.
+Example with useEffect and debounce:
+import { useState, useEffect } from 'react';
 
 function SearchComponent() {
 const [query, setQuery] = useState('');
@@ -486,17 +519,19 @@ return <input type="text" value={query} onChange={handleChange} />;
 In this example, the fetchData function will only be called after the user stops typing for 500 milliseconds.
 
 49. What is "code splitting" in React Native?
-    Code splitting is the practice of breaking down your application's code into smaller bundles that can be loaded as needed. This helps reduce the initial loading time of the app, as only the necessary code for the current screen or feature is loaded at first. As the user navigates to other parts of the app, the remaining code is loaded dynamically.
-    In React Native, code splitting can be achieved by using dynamic imports to load components or libraries when they are required, rather than including everything in a single large bundle.
-    Example:
-    const Component = React.lazy(() => import('./SomeComponent'));
+
+Code splitting is the practice of breaking down your application's code into smaller bundles that can be loaded as needed. This helps reduce the initial loading time of the app, as only the necessary code for the current screen or feature is loaded at first. As the user navigates to other parts of the app, the remaining code is loaded dynamically.
+In React Native, code splitting can be achieved by using dynamic imports to load components or libraries when they are required, rather than including everything in a single large bundle.
+Example:
+const Component = React.lazy(() => import('./SomeComponent'));
 
 50. What is a "controlled component" in React Native?
-    A controlled component is a component that does not maintain its own state for input fields, but instead, the value of the input is controlled by React’s state. The component receives the current value and a callback function to update the value from its parent component.
-    For example, an input field that updates its value based on a state managed by React is considered controlled.
-    Example:
-    const ControlledInput = () => {
-    const [text, setText] = useState('');
+
+A controlled component is a component that does not maintain its own state for input fields, but instead, the value of the input is controlled by React’s state. The component receives the current value and a callback function to update the value from its parent component.
+For example, an input field that updates its value based on a state managed by React is considered controlled.
+Example:
+const ControlledInput = () => {
+const [text, setText] = useState('');
 
 const handleChange = (e) => {
 setText(e.target.value);
@@ -511,11 +546,12 @@ return (
 };
 
 51. What is a "uncontrolled component" in React Native?
-    An uncontrolled component is a component that maintains its own internal state for input fields, meaning the input value is not controlled by React state. Instead, the DOM itself manages the input’s state, and you can access the value through a ref.
-    Uncontrolled components are typically used for simple forms where you don’t need to manage the form state through React, and instead, you allow the DOM to handle the value.
-    Example:
-    const UncontrolledInput = () => {
-    const inputRef = useRef();
+
+An uncontrolled component is a component that maintains its own internal state for input fields, meaning the input value is not controlled by React state. Instead, the DOM itself manages the input’s state, and you can access the value through a ref.
+Uncontrolled components are typically used for simple forms where you don’t need to manage the form state through React, and instead, you allow the DOM to handle the value.
+Example:
+const UncontrolledInput = () => {
+const inputRef = useRef();
 
 const handleSubmit = () => {
 console.log(inputRef.current.value);
@@ -530,10 +566,11 @@ return (
 };
 
 52. What are keys in React Native lists and why are they important?
-    In React Native (and React in general), the key prop is used to uniquely identify elements in a list. Keys help React identify which items have changed, been added, or removed, which makes the reconciliation process more efficient.
-    Using key helps prevent unnecessary re-renders and improves the performance of the application, especially when dealing with large lists.
-    For example, when rendering a list of items with FlatList or ScrollView, you must provide a unique key for each list item:
-    const data = [{ id: 1, name: 'John' }, { id: 2, name: 'Jane' }];
+
+In React Native (and React in general), the key prop is used to uniquely identify elements in a list. Keys help React identify which items have changed, been added, or removed, which makes the reconciliation process more efficient.
+Using key helps prevent unnecessary re-renders and improves the performance of the application, especially when dealing with large lists.
+For example, when rendering a list of items with FlatList or ScrollView, you must provide a unique key for each list item:
+const data = [{ id: 1, name: 'John' }, { id: 2, name: 'Jane' }];
 
 return (
 <FlatList
@@ -549,7 +586,9 @@ keyExtractor={(item) => item.id.toString()}
 - Expo: Expo is a set of tools built on top of React Native that simplifies the development process by providing a managed workflow. It offers a range of pre-configured libraries and tools, such as asset management, push notifications, camera access, and more. Expo handles much of the native configuration for you, allowing you to focus on writing the app without worrying about native code, but it may limit flexibility in some cases.
 
 54. How does React Native handle performance optimization?
-    React Native provides several techniques and tools to optimize the performance of mobile apps:
+
+React Native provides several techniques and tools to optimize the performance of mobile apps:
+
 1. Avoid Re-rendering: Use PureComponent or React.memo to prevent unnecessary re-renders of components.
 1. Optimize List Rendering: Use FlatList or SectionList for rendering large lists, as they only render the items that are visible on the screen.
 1. Image Optimization: Use Image components with appropriate resolution and caching to optimize image rendering.
@@ -557,7 +596,9 @@ keyExtractor={(item) => item.id.toString()}
 1. Native Modules: Offload complex tasks to native code for better performance using native modules.
 
 1. How do you handle deep linking in React Native?
-   Deep linking in React Native allows your app to respond to URLs and navigate directly to specific content or screens within the app. React Native supports deep linking via two main methods:
+
+Deep linking in React Native allows your app to respond to URLs and navigate directly to specific content or screens within the app. React Native supports deep linking via two main methods:
+
 1. URL Scheme: iOS and Android support custom URL schemes that can open your app when a specific URL is clicked. For example, a URL scheme like myapp://some-screen can be set up to open your app and navigate to a particular screen.
 1. Universal Links and App Links: These are links that can open your app on both iOS and Android, or if the app isn’t installed, they can open in a web browser.
    You can implement deep linking by setting up URL scheme handlers and linking events in your app.
@@ -584,9 +625,10 @@ return (
 }
 
 56. What is the purpose of Platform.OS in React Native?
-    Platform.OS is a property in React Native used to check the operating system (OS) on which the app is running. It helps in writing platform-specific code by determining whether the app is running on Android or iOS. You can use it to customize behavior or styles for each platform.
-    Example:
-    import { Platform, Text } from 'react-native';
+
+Platform.OS is a property in React Native used to check the operating system (OS) on which the app is running. It helps in writing platform-specific code by determining whether the app is running on Android or iOS. You can use it to customize behavior or styles for each platform.
+Example:
+import { Platform, Text } from 'react-native';
 
 function PlatformSpecificComponent() {
 return (
