@@ -181,3 +181,42 @@ const log = debounce(() => console.log('Debounced!'), 1000);
 log();
 log();
 log(); // Only this execution runs after 1s
+
+//8. Implement Object Flattening
+
+function flattenObject(obj, parentKey = '', result = {}) {
+  for (let key in obj) {
+    const newKey = parentKey ? `${parentKey}.${key}` : key;
+
+    if (
+      typeof obj[key] === 'object' &&
+      obj[key] !== null &&
+      !Array.isArray(obj[key])
+    ) {
+      flattenObject(obj[key], newKey, result);
+    } else {
+      result[newKey] = obj[key];
+    }
+  }
+  return result;
+}
+
+const input = {
+  user: {
+    name: 'John',
+    address: {
+      city: 'New York',
+      zip: '10001',
+    },
+  },
+};
+
+const flattened = flattenObject(input);
+console.log(flattened);
+
+//Output:
+// {
+//   "user.name": "John",
+//   "user.address.city": "New York",
+//   "user.address.zip": "10001"
+// }
